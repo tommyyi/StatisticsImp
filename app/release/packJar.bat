@@ -3,6 +3,11 @@ d:
 
 del /f /s /q /a .\*
 rd META-INF
+rd com
+rd de
+rd okhttp3
+rd okio
+rd retrofit2
 
 copy "D:\CODE\Offline\Statistics\StatisticsImp\app\release\greendao-1.3.7.jar" "D:\CODE\Offline\Statistics\StatisticsImp\app\packJar"
 copy "D:\CODE\Offline\Statistics\StatisticsImp\app\release\okhttp-3.2.0.jar" "D:\CODE\Offline\Statistics\StatisticsImp\app\packJar"
