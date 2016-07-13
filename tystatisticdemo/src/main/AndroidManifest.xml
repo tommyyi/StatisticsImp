@@ -32,10 +32,10 @@
         </receiver>
         <!--请添加下面这个receiver 结尾-->
 
-        <!--请添加下面2个参数开始-->
+        <!--请添加下面2个参数,参数值请向后台申请后修改 开始-->
         <meta-data android:name="tianyiGameAppId" android:value="1001"/>
         <meta-data android:name="tianyiGameChannelId" android:value="1998"/>
-        <!--请添加下面2个参数结尾-->
+        <!--请添加下面2个参数 结尾-->
 
     </application>
 
