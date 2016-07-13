@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'android.keystore'
+            keyPassword '123456'
+            storeFile file('C:/Program Files/Java/jdk1.8.0_91/bin/android.keystore')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.example.tystatisticdemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    dataBinding{
+        enabled=true
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //    androidTestCompile 'com.android.support.test:runner:0.5'
+}

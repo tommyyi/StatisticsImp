@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.tystatisticdemo"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <!--请添加如下权限 开始-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--请添加如下权限 结尾-->
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--请添加下面这个receiver 开始-->
+        <receiver android:name="com.ty.statisticsimp.report.ReportReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.BATTERY_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <!--请添加下面这个receiver 结尾-->
+
+        <!--请添加下面2个参数开始-->
+        <meta-data android:name="tianyiGameAppId" android:value="1001"/>
+        <meta-data android:name="tianyiGameChannelId" android:value="1998"/>
+        <!--请添加下面2个参数结尾-->
+
+    </application>
+
+</manifest>

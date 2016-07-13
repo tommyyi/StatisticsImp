@@ -1,0 +1,10 @@
+include ':app', ':tystatisticdemo'
+
+//include ':TyStaticLib'
+//project(':TyStaticLib').projectDir = new File('D:\\CODE\\MusicAPP\\TyStaticLib')
+
+//include ':servermgr'
+//project(':servermgr').projectDir = new File('D:\\CODE\\Statistics\\ServerMgr\\app')
+
+//include ':easydaogenerator'
+//project(':easydaogenerator').projectDir = new File('D:\\CODE\\MusicAPP\\DAO\\easydaogenerator')

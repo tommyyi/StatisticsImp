@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.ty.statisticsimp"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon">
+        <receiver android:name=".report.ReportReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.BATTERY_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="tianyiGameAppId" android:value="1001"/>
+        <meta-data android:name="tianyiGameChannelId" android:value="1998"/>
+    </application>
+
+</manifest>
