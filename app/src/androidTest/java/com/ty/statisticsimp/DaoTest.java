@@ -25,7 +25,7 @@ public class DaoTest
     @Test
     public void test() throws Exception
     {
-        TyStatic.init(mContext, "1010", "1010");
+        TyStatic.init(mContext);
         TyStatic.onCreate();
         TyStatic.reportRequest("200");
         TyStatic.reportResult(true, "200");

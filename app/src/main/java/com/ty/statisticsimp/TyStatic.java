@@ -29,7 +29,28 @@ public class TyStatic
     private static String imei;
     private static String imsi;
 
-    public static void init(Context context, String appId, String channelId)
+    public static void init(Context context)
+    {
+        isInit = true;
+
+        TyStatic.context = context;
+        AppParams appParams=new AppParams();
+        try
+        {
+            TyStatic.appId = appParams.getAppId(context);
+            TyStatic.channelId = appParams.getChannelId(context);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        mac = Tool.getMac(context);
+        imei = Tool.getImei(context);
+        imsi = Tool.getImsi(context);
+    }
+
+    private static void init(Context context, String appId, String channelId)
     {
         isInit = true;
 
