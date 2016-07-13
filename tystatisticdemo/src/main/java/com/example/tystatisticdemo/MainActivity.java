@@ -22,7 +22,7 @@ public class MainActivity extends Activity
 
     protected static void init(Context context)
     {
-        TyStatic.init(context, "3000", "3000");
+        TyStatic.init(context);
     }
 
     @Override

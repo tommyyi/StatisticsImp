@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 
-def VERSION_NAME = "v1.1"
+def JAR_NAME = "STATISTIC_v1.1.jar"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -36,28 +36,14 @@ dependencies {
 }
 
 task deleteOldJar(type: Delete) {
-    delete 'release/AndroidPlugin.jar'
+    delete 'release/'+JAR_NAME
 }
 
 task exportJar(type: Copy) {
     from('build/intermediates/bundles/release/')
     into('release/')
     include('classes.jar')
-    rename('classes.jar', 'AndroidPlugin.jar')
+    rename('classes.jar', JAR_NAME)
 }
 
 exportJar.dependsOn(deleteOldJar, build)
-
-task releaseJar(type: Copy) {
-    from( 'build/intermediates/bundles/debug/')
-    into( 'build/libs')
-    include('classes.jar')
-    rename('classes.jar', 'STATISTIC' + VERSION_NAME + '.jar')
-}
-
-task releaseLib(type: Copy, dependsOn: releaseJar) {
-    into "release/"
-    from 'build/libs'
-    from 'C:\\Users\\Administrator\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okhttp3\\okhttp\\3.2.0\\f7873a2ebde246a45c2a8d6f3247108b4c88a879'
-    from 'C:\\Users\\Administrator\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okio\\okio\\1.6.0\\98476622f10715998eacf9240d6b479f12c66143'
-}
