@@ -17,10 +17,3 @@
 /app/build/
 /tystatisticdemo/build/
 /app/packJar/
-/app/release/greendao-1.3.7.jar
-/app/release/retrofit-2.0.0.jar
-/app/release/okhttp-3.2.0.jar
-/app/release/STATISTIC_v1.1.jar
-/app/release/okio-1.6.0.jar
-/tystatisticdemo/libs/STATISTIC_v1.1.jar
-/tystatisticdemo/libs/
